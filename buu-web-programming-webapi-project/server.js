@@ -13,7 +13,12 @@ app.use(cors())
 
 
 /// TODO: Develop POST /contacts
-post
+app.post('/contacts', (req, res) => {
+    let newContacts = req.body
+    contacts.push(newContacts)
+    res.status(201).send()
+
+})
 
 
 app.listen(3000, () => {
